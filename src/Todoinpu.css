@@ -1,0 +1,20 @@
+h2{
+    text-align: center;
+    color: red;
+}
+.inpudiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+input{
+    padding: 1%;
+    width: 25%;
+}
+h3{
+    margin-left: 2%;
+}
+button{
+    margin-left: 4%;
+}
