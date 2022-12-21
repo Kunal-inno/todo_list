@@ -1,8 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Todoinpu.css'
 // import axios from "axios"
 
 const Todoinpu = () => {
+
+
+  const getlsdata =()=>{
+    let list = localStorage.getItem("koko")
+    console.log(list)
+
+    if (list){
+      return JSON.parse(localStorage.getItem("lists"))
+    }else{
+      return[]
+    }
+  }
 
     const[todo,settodo]=useState("")
     const[item,setitem]=useState([])
@@ -19,6 +31,12 @@ const Todoinpu = () => {
       });
       setitem(updateditem)
     }
+
+
+    useEffect (() => {
+      localStorage.setItem("koko", JSON.stringify(item))
+
+    },[item]);
 
   return (
     <>
